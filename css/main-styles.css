@@ -1,0 +1,7 @@
+body{
+    background: #f0f4f7;
+}
+section.resume-details-section .left-column iframe{
+    width: 100%;
+    height: 95vh;
+}
