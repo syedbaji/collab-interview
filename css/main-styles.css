@@ -2,32 +2,39 @@ body {
     background: #f0f4f7;
     font-family: 'Roboto', sans-serif;
 }
+
 section.resume-details-section .left-column iframe {
     width: 100%;
     height: 95vh;
 }
+
 section.resume-details-section .left-column>div, section.resume-details-section .right-column>div {
     box-shadow: 0px 0px 6px #ccc;
 }
+
 h5 {
     font-size: 20px;
     color: #212529;
 }
-h6{
+
+h6 {
     font-weight: 500;
     font-size: 16px;
     line-height: 120%;
     color: #212529;
 }
-.bg-blue{
+
+.bg-blue {
     background: #2183E5;
 }
+
 .progress-block .progress {
     /* height: 4px; */
     background: transparent;
     overflow: visible;
     padding: 0 32px;
 }
+
 .progress-block .progress-bar {
     overflow: visible;
     width: 25%;
@@ -37,7 +44,9 @@ h6{
     align-items: center;
     justify-content: flex-start;
     flex-flow: row nowrap;
+    cursor: pointer;
 }
+
 .progress-block .progress-bar .dot {
     width: 16px;
     height: 14px;
@@ -46,28 +55,35 @@ h6{
     z-index: 9;
     transition: all 1s ease-in-out;
 }
+
 .progress-block .progress-bar .line {
     height: 1px;
     background: #E7E7E7;
     transition: all 1s ease-in-out;
 }
+
 .progress-block.step-1-done .progress-bar.step-1 .dot, .progress-block.step-1-done .progress-bar.step-1 .line {
     background: #00BB28;
 }
+
 .progress-block.step-2-done .progress-bar.step-2 .dot, .progress-block.step-2-done .progress-bar.step-2 .line {
     background: #00BB28;
 }
+
 .progress-block.step-3-done .progress-bar.step-3 .dot, .progress-block.step-3-done .progress-bar.step-3 .line {
     background: #00BB28;
 }
+
 .progress-block.step-4-done .progress-bar.step-4 .dot, .progress-block.step-4-done .progress-bar.step-4 .line {
     background: #00BB28;
 }
+
 .progress-block .progress-bar span.last {
     right: 0;
     transform: translateX(34%);
     left: unset;
 }
+
 .progress-block .progress-bar span {
     color: #6C757D;
     position: absolute;
@@ -79,32 +95,38 @@ h6{
     font-size: 12px;
     line-height: 14px;
 }
+
 .cta-block a {
     font-weight: 500;
     font-size: 16px;
     line-height: 120%;
     color: #2183E5;
 }
+
 .cta-block button {
     font-size: 16px;
     line-height: 120%;
     text-align: center;
     color: #FFFFFF;
 }
+
 .cta-block button.cancel-edit {
     background: #E9ECEF;
     color: #B4C1CD;
     border: none;
 }
+
 .cta-block button.update-edited {
     background: #2183E5;
 }
+
 .accordion-block .card-header {
     background: #FFFFFF;
     border: 1px solid #CED4DA;
     box-sizing: border-box;
     border-radius: 4px;
 }
+
 .accordion-block .card-link {
     font-weight: normal;
     font-size: 16px;
@@ -115,61 +137,81 @@ h6{
     align-items: center;
     justify-content: space-between;
 }
+
 .accordion-block .active-card .card-header {
     border: 1px solid #CED4DA;
 }
+
 .accordion-block .active-card a.card-link, .accordion-block a.card-link:hover {
     background: #EDF3FF;
     color: #2183E5;
 }
+
 .accordion-block .active-card a.card-link i.fa-angle-down {
     transform: rotate(180deg);
 }
+
 form .form-group label {
     font-size: 12px;
     line-height: 120%;
 }
+
 form.in-display-mode .form-group label {
     color: rgba(33, 131, 230, 0.6);
 }
+
 form.in-edit-mode .form-group label {
     color: #999999;
 }
+
 form .form-group input {
     font-size: 16px;
     line-height: 120%;
     color: #6C757D;
 }
-form.in-display-mode .form-group input, form.in-display-mode .form-group label{
+
+form.in-display-mode .form-group input, 
+form.in-display-mode .form-group label {
     border: 1px solid transparent;
     padding-left: 0px;
     padding-top: 0px;
     pointer-events: none;
+    margin-bottom: 0px;
 }
+form.in-display-mode .chip,
+form.in-display-mode button{
+    pointer-events: none;
+}
+
 form .form-group input::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: #B4C1CD;
     font-size: 15px;
 }
+
 form .form-group input::-moz-placeholder {
     /* Firefox 19+ */
     color: #B4C1CD;
     font-size: 15px;
 }
+
 form .form-group input:-ms-input-placeholder {
     /* IE 10+ */
     color: #B4C1CD;
     font-size: 15px;
 }
+
 form .form-group input:-moz-placeholder {
     /* Firefox 18- */
     color: #B4C1CD;
     font-size: 15px;
 }
+
 .form-control:focus {
     border: 1px solid #2183E5;
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
 }
+
 .chip {
     display: inline-block;
     padding: 0 16px;
@@ -178,13 +220,16 @@ form .form-group input:-moz-placeholder {
     line-height: 32px;
     color: #6C757D;
     border-radius: 32px;
-    background: #f1f1f1;
+    background: #FFFFFF;
     border: 1px solid #CED4DA;
+    cursor: pointer;
 }
-.chip:focus, .chip:hover, .chip:active, .chip:target {
+
+.chip:focus, .chip:hover, .chip:active, .chip:target, .chip.active {
     color: #6C757D;
     background: #F0F4F7;
 }
+
 .closebtn {
     padding-left: 10px;
     color: #888;
@@ -193,25 +238,31 @@ form .form-group input:-moz-placeholder {
     font-size: 20px;
     cursor: pointer;
 }
+
 .closebtn:hover {
     color: #000;
 }
-form .radio-group label{
+
+form .radio-group label {
     font-size: 16px;
     line-height: 120%;
     color: #6C757D !important;
 }
-.only-if-working{
+
+.only-if-working {
     border-bottom: 1px solid #CED4DA;
 }
-.only-if-working.notworking{
+
+.only-if-working.notworking {
     display: none !important;
 }
-.btn-outline-default{
+
+.btn-outline-default {
     color: #B4C1CD;
     border: 1px solid #CED4DA;
 }
-.last-updated-block{
+
+.last-updated-block {
     font-size: 12px;
     line-height: 120%;
     text-align: right;
@@ -219,6 +270,29 @@ form .radio-group label{
     display: flex;
     align-items: center;
 }
-.last-updated-block a{
+
+.last-updated-block a {
     color: #2183E5;
+}
+.input-group{
+    position: relative;
+}
+.input-group .input-group-append{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+form.in-display-mode input[type="date"]::-webkit-calendar-picker-indicator,
+form.in-display-mode .input-group-append {
+    color: rgba(0, 0, 0, 0);
+    opacity: 0
+}
+
+form.in-display-mode input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background: transparent;
+    cursor: pointer;
 }

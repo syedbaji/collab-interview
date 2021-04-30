@@ -46,25 +46,25 @@
                         </div>
                         <div class="col-lg-12 p-0 progress-block mb-5 step-1-done">
                             <div class="progress">
-                                <div class="progress-bar step-1" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                <div class="progress-bar step-1" data-step="step-1" role="progressbar" aria-valuenow="25" aria-valuemin="0"
                                     aria-valuemax="100">
                                     <div class="dot"></div>
                                     <div class="line" style="width:100%"></div>
                                     <span>Personal Details</span>
                                 </div>
-                                <div class="progress-bar step-2" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                <div class="progress-bar step-2" data-step="step-2" role="progressbar" aria-valuenow="25" aria-valuemin="0"
                                     aria-valuemax="100">
                                     <div class="dot"></div>
                                     <div class="line" style="width:100%"></div>
                                     <span>Professional Details</span>
                                 </div>
-                                <div class="progress-bar step-3" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                <div class="progress-bar step-3" data-step="step-3" role="progressbar" aria-valuenow="25" aria-valuemin="0"
                                     aria-valuemax="100">
                                     <div class="dot"></div>
                                     <div class="line" style="width:100%"></div>
                                     <span>Education Details</span>
                                 </div>
-                                <div class="progress-bar step-4" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                <div class="progress-bar step-4" data-step="step-4" role="progressbar" aria-valuenow="25" aria-valuemin="0"
                                     aria-valuemax="100">
                                     <div class="dot"></div>
                                     <div class="line" style="width:100%"></div>
@@ -226,7 +226,8 @@
                                             <main class="col-12 p-0 pt-3 main-content">
                                                 <form
                                                     class="professional-form d-flex flex-row flex-wrap justify-content-between in-display-mode">
-                                                    <div class="col-lg-12 px-2 d-flex flex-row flex-wrap justify-content-between">
+                                                    <div
+                                                        class="col-lg-12 px-2 d-flex flex-row flex-wrap justify-content-between">
                                                         <div class="form-group radio-group">
                                                             <div class="form-check-inline">
                                                                 <label class="form-check-label">
@@ -243,7 +244,8 @@
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                        <span class="last-updated-block mb-3">Last date of Updation: <a href="#">23rd Feb 2021</a></span>
+                                                        <span class="last-updated-block mb-3">Last date of Updation: <a
+                                                                href="#">23rd Feb 2021</a></span>
                                                     </div>
                                                     <div
                                                         class="col-lg-12 p-0 only-if-working d-flex flex-row flex-wrap justify-content-between mb-3">
@@ -260,9 +262,18 @@
                                                         <div class="col-lg-4 px-2">
                                                             <div class="form-group">
                                                                 <label for="DateofJoin">Date of Join</label>
-                                                                <input type="date" class="form-control"
-                                                                    placeholder="Enter Date of Join" id="DateofJoin"
-                                                                    value="-">
+                                                                    <div class="input-group mb-3">
+                                                                        <input type="date" class="form-control"
+                                                                            placeholder="Enter Date of Join"
+                                                                            aria-label="Enter Date of Join"
+                                                                            aria-describedby="basic-addn1" id="DateofJoin"
+                                                                            value="-">
+                                                                        <div class="input-group-append">
+                                                                            <span class="input-group-text px-3 py-2"> 
+                                                                                <i class="fa fa-calendar"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 px-2">
@@ -286,7 +297,7 @@
                                                                         <span class="closebtn"
                                                                             onclick="this.parentElement.style.display='none'">&times;</span>
                                                                     </div>
-                                                                    <div class="chip my-3">
+                                                                    <div class="chip my-3 active">
                                                                         System Automation
                                                                         <span class="closebtn"
                                                                             onclick="this.parentElement.style.display='none'">&times;</span>
@@ -298,114 +309,129 @@
                                                     <div class="col-lg-12 py-0 px-2 professional-history-block">
                                                         <h6 class="">Professional History</h6>
                                                         <div
-                                                            class="col-lg-12 p-0 chips-block d-flex flex-row flex-wrap align-items-center justify-content-start">
+                                                            class="col-lg-12 p-0 organization-chips-block chips-block d-flex flex-row flex-wrap align-items-center justify-content-start mb-3">
                                                             <div class="chip mb-2 mt-2 mr-3">
-                                                                Salt Lake Board of Realtors
-                                                                <span class="closebtn"
-                                                                    onclick="this.parentElement.style.display='none'">&times;</span>
+                                                                <span class="org-name">Salt Lake Board of Realtors</span>
+                                                                <span class="closebtn">&times;</span>
                                                             </div>
-                                                            <div class="chip mb-2 mt-2 mr-3">
-                                                                Wesley Johnson
-                                                                <span class="closebtn"
-                                                                    onclick="this.parentElement.style.display='none'">&times;</span>
+                                                            <div class="chip active mb-2 mt-2 mr-3">
+                                                                <span class="org-name">Wesley Johnson</span>
+                                                                <span class="closebtn">&times;</span>
                                                             </div>
-                                                            <div class="add-chip d-inline-block">
-                                                                <button type="button"
-                                                                    class="btn btn-sm btn-primary bg-blue">Add
-                                                                    Organisation</button>
+                                                            <div class="add-org-chip d-inline-block ml-auto">
+                                                                <button type="button" class="btn btn-sm btn-primary bg-blue add-org-btn">Add Organisation</button>
                                                             </div>
                                                         </div>
-                                                        <div
-                                                            class="col-lg-12 p-0 d-flex flex-row flex-wrap align-items-center justify-content-start">
-                                                            <div class="col-lg-9 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="StrategicManagement">Organisation
-                                                                        name</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Strategic Management - Experienced in vendor manangement, contact negotiations and stra"
-                                                                        id="StrategicManagement" value="Wesley Johnson">
+                                                        <div class="col-lg-12 p-0 addEdit-organization-block">
+                                                            <div class="col-lg-12 p-0 d-flex flex-row flex-wrap align-items-center justify-content-start">
+                                                                <div class="col-lg-9 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="Organisationname">Organisation name</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Organisation name"
+                                                                            id="Organisationname" value="Wesley Johnson">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-4 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="EndDate">End Date</label>
-                                                                    <input type="date" class="form-control"
-                                                                        placeholder="Enter End Date" id="EndDate"
-                                                                        value="-">
+                                                                <div class="col-lg-4 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="EndDate">End Date</label>
+                                                                        <div class="input-group mb-3">
+                                                                            <input type="date" class="form-control"
+                                                                                placeholder="Enter End Date"
+                                                                                aria-label="Enter End Date"
+                                                                                aria-describedby="basic-addon1" id="EndDate"
+                                                                                value="-">
+                                                                            <div class="input-group-append">
+                                                                                <span class="input-group-text px-3 py-2">
+                                                                                    <i class="fa fa-calendar"></i>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-4 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="StartDate">Start Date</label>
-                                                                    <input type="date" class="form-control"
-                                                                        placeholder="Enter Start Date" id="StartDate"
-                                                                        value="-">
+                                                                <div class="col-lg-4 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="StartDate">Start Date</label>
+                                                                            <div class="input-group mb-3">
+                                                                                <input type="date" class="form-control"
+                                                                                    placeholder="Enter Start Date"
+                                                                                    aria-label="Enter Start Date"
+                                                                                    aria-describedby="basic-addn1" id="StartDate"
+                                                                                    value="-">
+                                                                                <div class="input-group-append">
+                                                                                    <span class="input-group-text px-3 py-2"> 
+                                                                                        <i class="fa fa-calendar"></i>
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-8 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="ManagerName">Manager Name</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Manager Name" id="ManagerName"
-                                                                        value="">
+                                                                <div class="col-lg-8 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="ManagerName">Manager Name</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Manager Name" id="ManagerName"
+                                                                            value="">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-4 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="ManagerContactNumber">Manager Contact Number</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Manager Contact Number"
-                                                                        id="ManagerContactNumber" value="">
+                                                                <div class="col-lg-4 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="ManagerContactNumber">Manager Contact
+                                                                            Number</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Manager Contact Number"
+                                                                            id="ManagerContactNumber" value="">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="ProAddress1">Address 1</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Enter Address 1" id="ProAddress1"
-                                                                        value="2257  Bluff Street">
+                                                                <div class="col-lg-12 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="ProAddress1">Address 1</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Enter Address 1" id="ProAddress1"
+                                                                            value="2257  Bluff Street">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="ProAddress2">Address 2</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Enter Address 2" id="ProAddress2"
-                                                                        value="2257  Bluff Street">
+                                                                <div class="col-lg-12 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="ProAddress2">Address 2</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Enter Address 2" id="ProAddress2"
+                                                                            value="2257  Bluff Street">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-4 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="ProCity">City</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Enter City" id="ProCity"
-                                                                        value="Milestown">
+                                                                <div class="col-lg-4 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="ProCity">City</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Enter City" id="ProCity"
+                                                                            value="Milestown">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-4 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="ProState">State</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Enter State" id="ProState"
-                                                                        value="Maryland">
+                                                                <div class="col-lg-4 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="ProState">State</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Enter State" id="ProState"
+                                                                            value="Maryland">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-4 px-2">
-                                                                <div class="form-group">
-                                                                    <label for="ProZipCode">Zip Code</label>
-                                                                    <input type="text" class="form-control"
-                                                                        placeholder="Enter Zip Code" id="ProZipCode"
-                                                                        value="20650">
+                                                                <div class="col-lg-4 px-2">
+                                                                    <div class="form-group">
+                                                                        <label for="ProZipCode">Zip Code</label>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Enter Zip Code" id="ProZipCode"
+                                                                            value="20650">
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12 px-2">
-                                                                <div class="form-group text-right">
-                                                                    <button type="button"
-                                                                        class="btn btn-outline-default btn-sm reset-edit d-none ml-2 px-3">Reset</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-outline-default btn-sm cancel-edit d-none ml-2 px-3">Cancel</button>
-                                                                    <button type="button"
-                                                                        class="btn btn-outline-primary btn-sm update-edited d-none ml-2 px-3">Update</button>
+                                                                <div class="col-lg-12 px-2">
+                                                                    <div class="form-group text-right">
+                                                                        <button type="button"
+                                                                            class="btn btn-outline-default btn-sm reset-edit d-none ml-2 px-3">Reset</button>
+                                                                        <button type="button"
+                                                                            class="btn btn-outline-default btn-sm cancel-edit d-none ml-2 px-3">Cancel</button>
+                                                                        <button type="button"
+                                                                            class="btn btn-outline-primary btn-sm update-org d-none ml-2 px-3">Update</button>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -458,8 +484,10 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12 px-0 py-4 text-right cta-block">
-                                    <button class="btn ml-3 btn-secondary btn-sm cancel-edit d-none px-3">Cancel</button>
-                                    <button class="btn ml-3 btn-primary btn-sm update-edited d-none px-3">Update</button>
+                                    <button
+                                        class="btn ml-3 btn-secondary btn-sm cancel-edit d-none px-3">Cancel</button>
+                                    <button
+                                        class="btn ml-3 btn-primary btn-sm update-edited d-none px-3">Update</button>
                                 </div>
                             </div>
                         </div>
