@@ -1,36 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Syed-Baji-Interview-28042021</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<body>
 
-<!-- local script attachments here -->
+<head>
+    <title>Syed-Baji-Interview-28042021</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- local script attachments here -->
     <link rel="stylesheet" href="css/main-styles.css">
     <script src="js/main-scripts.js"></script>
 </body>
 <section class="resume-details-section two-col-section">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 p-0 row-1 col-wrapper d-flex flex-row flex-wrap justify-content-between">
-                <div class="col-lg-5 p-0 column1 left-column">
-                    <div class="col-lg-12 p-0">
-                        <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://syedbaji.github.io/collab-interview/images/Resume_Syed_Baji_17Sep2020.pdf" frameborder="0"></iframe>
+                <div class="col-lg-5 px-2 column1 left-column">
+                    <div class="col-lg-12 p-0 p-3 bg-white">
+                        <h5 class="mb-3">Resume Uploaded</h5>
+                        <iframe src="https://syedbaji.github.io/collab-interview/images/Resume_Syed_Baji_17Sep2020.pdf"
+                            frameborder="0"></iframe>
                     </div>
                 </div>
-                <div class="col-lg-7 p-0 column2 right-column">
-                    <div class="col-lg-12 p-0">
-                        content here
+                <div class="col-lg-7 px-2 column2 right-column">
+                    <div class="col-lg-12 p-3 bg-white">
+                        <div
+                            class="col-lg-12 p-0 d-flex flex-row flex-wrap align-items-start justify-content-between top-head-block">
+                            <div class="col-lg-6 p-0">
+                                <h5 class="mb-3">Resume Outline</h5>
+                            </div>
+                            <div class="col-lg-6 p-0 text-right cta-block">
+                                <a href="#">Edit Information <i class="fa fa-edit"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 p-0 progress-block mb-5 step-1-done">
+                            <div class="progress">
+                                <div class="progress-bar step-1" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="dot"></div>
+                                    <div class="line" style="width:100%"></div>
+                                    <span>Personal Details</span>
+                                </div>
+                                <div class="progress-bar step-2" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="dot"></div>
+                                    <div class="line" style="width:100%"></div>
+                                    <span>Professional Details</span>
+                                </div>
+                                <div class="progress-bar step-3" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="dot"></div>
+                                    <div class="line" style="width:100%"></div>
+                                    <span>Education Details</span>
+                                </div>
+                                <div class="progress-bar step-4" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <div class="dot"></div>
+                                    <div class="line" style="width:100%"></div>
+                                    <span>Key Skills</span>
+                                    <div class="dot last"></div>
+                                    <span class="last">Interested Jobs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 p-0">
+                            <div id="accordion" class="accordion-block">
+                                <div class="card mb-1 border-0">
+                                    <div class="card-header p-0 rounded">
+                                        <a class="px-3 py-2 card-link" data-step="step-1-done" data-toggle="collapse" href="#collapseOne">
+                                            Personal Details
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum..
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-1 border-0">
+                                    <div class="card-header p-0 rounded">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-2-done" data-toggle="collapse" href="#collapseTwo">
+                                            Professional Details
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum..
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-1 border-0">
+                                    <div class="card-header p-0 rounded">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-3-done" data-toggle="collapse" href="#collapseThree">
+                                            Educational Details
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum..
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-1 border-0">
+                                    <div class="card-header p-0 rounded">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-4-done" data-toggle="collapse" href="#collapseFour">
+                                            Key Skills
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum..
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-1 border-0">
+                                    <div class="card-header p-0 rounded">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-5-done" data-toggle="collapse" href="#collapseFive">
+                                            Interested Jobs
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            Lorem ipsum..
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 </html>

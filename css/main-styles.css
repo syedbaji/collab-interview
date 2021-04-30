@@ -1,7 +1,110 @@
 body{
     background: #f0f4f7;
+    font-family: 'Roboto', sans-serif;
 }
 section.resume-details-section .left-column iframe{
     width: 100%;
     height: 95vh;
+}
+section.resume-details-section .left-column > div,
+section.resume-details-section .right-column > div{
+    box-shadow: 0px 0px 6px #ccc;
+}
+h5{
+    font-size: 20px;
+    color: #212529;
+}
+.progress-block .progress{
+    /* height: 4px; */
+    background: transparent;
+    overflow: visible;
+    padding: 0 32px;
+}
+.progress-block .progress-bar{
+    overflow: visible;
+    width: 25%;
+    position: relative;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row nowrap;
+}
+.progress-block .progress-bar .dot{
+    width: 16px;
+    height: 14px;
+    background: #E7E7E7;
+    border-radius: 20px;
+    z-index: 9;
+    transition: all 1s ease-in-out;
+}
+.progress-block .progress-bar .line{
+    height: 2px;
+    background: #E7E7E7;
+    transition: all 1s ease-in-out;
+}
+.progress-block.step-1-done .progress-bar.step-1 .dot, 
+.progress-block.step-1-done .progress-bar.step-1 .line{
+    background: #00BB28;
+}
+.progress-block.step-2-done .progress-bar.step-2 .dot, 
+.progress-block.step-2-done .progress-bar.step-2 .line{
+    background: #00BB28;
+}
+.progress-block.step-3-done .progress-bar.step-3 .dot, 
+.progress-block.step-3-done .progress-bar.step-3 .line{
+    background: #00BB28;
+}
+.progress-block.step-4-done .progress-bar.step-4 .dot, 
+.progress-block.step-4-done .progress-bar.step-4 .line{
+    background: #00BB28;
+}
+.progress-block .progress-bar span.last{
+    right: 0;
+    transform: translateX(34%);
+    left: unset;
+}
+.progress-block .progress-bar span{
+    color: #6C757D;
+    position: absolute;
+    transform: translateX(-34%);
+    z-index: 9;
+    left: 0;
+    top: 24px;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+}
+.cta-block a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #2183E5;
+}
+.accordion-block .card-header{
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.accordion-block .card-link{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    color: #6C757D;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.accordion-block .active-card .card-header{
+    border: 1px solid #CED4DA;
+}
+.accordion-block .active-card a.card-link,
+.accordion-block a.card-link:hover{
+    background: #EDF3FF;
+    color: #2183E5;
+}
+.accordion-block .active-card a.card-link i.fa-angle-down{
+    transform: rotate(180deg);
 }
