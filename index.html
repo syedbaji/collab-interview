@@ -21,7 +21,7 @@
     <script src="js/main-scripts.js"></script>
 </body>
 <section class="resume-details-section two-col-section">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 p-0 row-1 col-wrapper d-flex flex-row flex-wrap justify-content-between">
                 <div class="col-lg-5 px-2 column1 left-column">
@@ -39,7 +39,9 @@
                                 <h5 class="mb-3">Resume Outline</h5>
                             </div>
                             <div class="col-lg-6 p-0 text-right cta-block">
-                                <a href="#">Edit Information <i class="fa fa-edit"></i></a>
+                                <a href="#" class="edit-info ml-3">Edit Information <i class="fa fa-edit"></i></a>
+                                <button class="btn ml-3 btn-secondary btn-sm cancel-edit d-none px-3">Cancel</button>
+                                <button class="btn ml-3 btn-primary btn-sm update-edited d-none px-3">Update</button>
                             </div>
                         </div>
                         <div class="col-lg-12 p-0 progress-block mb-5 step-1-done">
@@ -76,33 +78,347 @@
                             <div id="accordion" class="accordion-block">
                                 <div class="card mb-1 border-0">
                                     <div class="card-header p-0 rounded">
-                                        <a class="px-3 py-2 card-link" data-step="step-1-done" data-toggle="collapse" href="#collapseOne">
+                                        <a class="px-3 py-2 card-link" data-step="step-1-done" data-toggle="collapse"
+                                            href="#collapseOne">
                                             Personal Details
                                             <i class="fa fa-angle-down"></i>
                                         </a>
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Lorem ipsum..
+                                        <div class="card-body p-0">
+                                            <main class="col-12 p-0 py-3 main-content">
+                                                <form
+                                                    class="personal-form d-flex flex-row flex-wrap justify-content-between in-display-mode">
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="FirstName">First Name</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter First Name" id="FirstName"
+                                                                value="John">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="MiddleName">Middle Name</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Middle Name" id="MiddleName"
+                                                                value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="LastName">Last Name</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Last Name" id="LastName"
+                                                                value="Bravo">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="FatherName">Father’s Name</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Father’s Name" id="FatherName"
+                                                                value="Steave">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="MotherName">Mother’s Name</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Mother’s Name" id="MotherName"
+                                                                value="Maria">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 px-2">
+                                                        <div class="form-group">
+                                                            <label for="EmergencyContactPerson">Emergency Contact
+                                                                Person</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Emergency Contact Person"
+                                                                id="EmergencyContactPerson" value="-">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 px-2">
+                                                        <div class="form-group">
+                                                            <label for="EmergencyContactNumber">Emergency Contact
+                                                                Number</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Emergency Contact Number"
+                                                                id="EmergencyContactNumber" value="-">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 px-2">
+                                                        <div class="form-group">
+                                                            <label for="Address1">Address 1</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Address 1" id="Address1"
+                                                                value="2257  Bluff Street">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 px-2">
+                                                        <div class="form-group">
+                                                            <label for="Address2">Address 2</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Address 2" id="Address2"
+                                                                value="2257  Bluff Street">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="City">City</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter City" id="City" value="Milestown">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="State">State</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter State" id="State" value="Maryland">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="ZipCode">Zip Code</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Zip Code" id="ZipCode" value="20650">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="HomeNumber">Home Number</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Home Number" id="HomeNumber"
+                                                                value="301-769-9361">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="MobileNumber">Mobile Number</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Mobile Number" id="MobileNumber"
+                                                                value="301-529-3720">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 px-2">
+                                                        <div class="form-group">
+                                                            <label for="WorkNumber">Work Number</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Work Number" id="WorkNumber"
+                                                                value="-">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </main>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card mb-1 border-0">
                                     <div class="card-header p-0 rounded">
-                                        <a class="px-3 py-2 collapsed card-link" data-step="step-2-done" data-toggle="collapse" href="#collapseTwo">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-2-done"
+                                            data-toggle="collapse" href="#collapseTwo">
                                             Professional Details
                                             <i class="fa fa-angle-down"></i>
                                         </a>
                                     </div>
                                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Lorem ipsum..
+                                        <div class="card-body p-0">
+                                            <main class="col-12 p-0 pt-3 main-content">
+                                                <form
+                                                    class="professional-form d-flex flex-row flex-wrap justify-content-between in-display-mode">
+                                                    <div class="col-lg-12 px-2 d-flex flex-row flex-wrap justify-content-between">
+                                                        <div class="form-group radio-group">
+                                                            <div class="form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input"
+                                                                        name="workingNoworkingRadio" value="working"
+                                                                        checked>Working
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input"
+                                                                        name="workingNoworkingRadio"
+                                                                        value="notworking">Not working
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <span class="last-updated-block mb-3">Last date of Updation: <a href="#">23rd Feb 2021</a></span>
+                                                    </div>
+                                                    <div
+                                                        class="col-lg-12 p-0 only-if-working d-flex flex-row flex-wrap justify-content-between mb-3">
+                                                        <div class="col-lg-8 px-2">
+                                                            <div class="form-group">
+                                                                <label for="PresentCompanyName">Present Company
+                                                                    Name</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Present Company Name"
+                                                                    id="PresentCompanyName"
+                                                                    value="American Family Insurance">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 px-2">
+                                                            <div class="form-group">
+                                                                <label for="DateofJoin">Date of Join</label>
+                                                                <input type="date" class="form-control"
+                                                                    placeholder="Enter Date of Join" id="DateofJoin"
+                                                                    value="-">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 px-2">
+                                                            <div class="form-group">
+                                                                <label for="StrategicManagement">Roles &
+                                                                    Responibilities</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Strategic Management - Experienced in vendor manangement, contact negotiations and stra"
+                                                                    id="StrategicManagement" value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 px-2">
+                                                            <div class="form-group">
+                                                                <label for="TypeSkill">Key Skills for the Job</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Type Skill name and press Enter to add"
+                                                                    id="TypeSkill" value="">
+                                                                <div class="col-lg-12 p-0 chips-block">
+                                                                    <div class="chip my-3">
+                                                                        Team Management
+                                                                        <span class="closebtn"
+                                                                            onclick="this.parentElement.style.display='none'">&times;</span>
+                                                                    </div>
+                                                                    <div class="chip my-3">
+                                                                        System Automation
+                                                                        <span class="closebtn"
+                                                                            onclick="this.parentElement.style.display='none'">&times;</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 py-0 px-2 professional-history-block">
+                                                        <h6 class="">Professional History</h6>
+                                                        <div
+                                                            class="col-lg-12 p-0 chips-block d-flex flex-row flex-wrap align-items-center justify-content-start">
+                                                            <div class="chip mb-2 mt-2 mr-3">
+                                                                Salt Lake Board of Realtors
+                                                                <span class="closebtn"
+                                                                    onclick="this.parentElement.style.display='none'">&times;</span>
+                                                            </div>
+                                                            <div class="chip mb-2 mt-2 mr-3">
+                                                                Wesley Johnson
+                                                                <span class="closebtn"
+                                                                    onclick="this.parentElement.style.display='none'">&times;</span>
+                                                            </div>
+                                                            <div class="add-chip d-inline-block">
+                                                                <button type="button"
+                                                                    class="btn btn-sm btn-primary bg-blue">Add
+                                                                    Organisation</button>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-lg-12 p-0 d-flex flex-row flex-wrap align-items-center justify-content-start">
+                                                            <div class="col-lg-9 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="StrategicManagement">Organisation
+                                                                        name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Strategic Management - Experienced in vendor manangement, contact negotiations and stra"
+                                                                        id="StrategicManagement" value="Wesley Johnson">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="EndDate">End Date</label>
+                                                                    <input type="date" class="form-control"
+                                                                        placeholder="Enter End Date" id="EndDate"
+                                                                        value="-">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="StartDate">Start Date</label>
+                                                                    <input type="date" class="form-control"
+                                                                        placeholder="Enter Start Date" id="StartDate"
+                                                                        value="-">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-8 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="ManagerName">Manager Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Manager Name" id="ManagerName"
+                                                                        value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="ManagerContactNumber">Manager Contact Number</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Manager Contact Number"
+                                                                        id="ManagerContactNumber" value="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="ProAddress1">Address 1</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Enter Address 1" id="ProAddress1"
+                                                                        value="2257  Bluff Street">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="ProAddress2">Address 2</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Enter Address 2" id="ProAddress2"
+                                                                        value="2257  Bluff Street">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="ProCity">City</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Enter City" id="ProCity"
+                                                                        value="Milestown">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="ProState">State</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Enter State" id="ProState"
+                                                                        value="Maryland">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 px-2">
+                                                                <div class="form-group">
+                                                                    <label for="ProZipCode">Zip Code</label>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Enter Zip Code" id="ProZipCode"
+                                                                        value="20650">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 px-2">
+                                                                <div class="form-group text-right">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-default btn-sm reset-edit d-none ml-2 px-3">Reset</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-default btn-sm cancel-edit d-none ml-2 px-3">Cancel</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-primary btn-sm update-edited d-none ml-2 px-3">Update</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </main>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card mb-1 border-0">
                                     <div class="card-header p-0 rounded">
-                                        <a class="px-3 py-2 collapsed card-link" data-step="step-3-done" data-toggle="collapse" href="#collapseThree">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-3-done"
+                                            data-toggle="collapse" href="#collapseThree">
                                             Educational Details
                                             <i class="fa fa-angle-down"></i>
                                         </a>
@@ -115,7 +431,8 @@
                                 </div>
                                 <div class="card mb-1 border-0">
                                     <div class="card-header p-0 rounded">
-                                        <a class="px-3 py-2 collapsed card-link" data-step="step-4-done" data-toggle="collapse" href="#collapseFour">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-4-done"
+                                            data-toggle="collapse" href="#collapseFour">
                                             Key Skills
                                             <i class="fa fa-angle-down"></i>
                                         </a>
@@ -128,7 +445,8 @@
                                 </div>
                                 <div class="card mb-1 border-0">
                                     <div class="card-header p-0 rounded">
-                                        <a class="px-3 py-2 collapsed card-link" data-step="step-5-done" data-toggle="collapse" href="#collapseFive">
+                                        <a class="px-3 py-2 collapsed card-link" data-step="step-5-done"
+                                            data-toggle="collapse" href="#collapseFive">
                                             Interested Jobs
                                             <i class="fa fa-angle-down"></i>
                                         </a>
@@ -138,6 +456,10 @@
                                             Lorem ipsum..
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-lg-12 px-0 py-4 text-right cta-block">
+                                    <button class="btn ml-3 btn-secondary btn-sm cancel-edit d-none px-3">Cancel</button>
+                                    <button class="btn ml-3 btn-primary btn-sm update-edited d-none px-3">Update</button>
                                 </div>
                             </div>
                         </div>
