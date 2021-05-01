@@ -186,6 +186,9 @@ form.in-display-mode .form-group label {
     pointer-events: none;
     margin-bottom: 0px;
 }
+form.in-display-mode .form-group{
+    opacity: 0.6;
+}
 form.in-display-mode .chip,
 form.in-display-mode button{
     pointer-events: none;
