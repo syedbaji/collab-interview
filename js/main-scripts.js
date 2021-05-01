@@ -1,5 +1,6 @@
 $(document).ready(function(){
     fillForm('display');
+    initOrgBlock();
 
     $('#accordion .card .collapse').each(function(){
         if($(this).hasClass('show')){
@@ -14,16 +15,17 @@ $(document).ready(function(){
         $(this).closest('.card').removeClass('active-card');
     });
     $('.edit-info').on('click', function(){
-        $(this).toggleClass('d-none');
-        $('.cancel-edit, .update-edited, .reset-edit, .update-org').toggleClass('d-none');
+        $('.cancel-edit, .update-edited, .reset-edit, .update-org, .edit-info').toggleClass('d-none');
         $('form').removeClass('in-display-mode').addClass('in-edit-mode');
         fillForm('edit');
     });
     $('.cancel-edit, .update-edited').on('click', function(){
-        $('.cancel-edit, .update-edited, .reset-edit, .update-org').toggleClass('d-none');
-        $('.edit-info').toggleClass('d-none');
-        $('form').removeClass('in-edit-mode').addClass('in-display-mode');
-        fillForm('display');
+        $('.btn-status').toggleClass('d-none');
+        setTimeout(function(){
+            $('.cancel-edit, .update-edited, .reset-edit, .update-org, .edit-info, .btn-status').toggleClass('d-none');
+            $('form').removeClass('in-edit-mode').addClass('in-display-mode');
+            fillForm('display');
+        },1000);
     });
     $('input[name="workingNoworkingRadio"]').on('change', function(){
         $('.only-if-working').removeClass('working notworking').addClass($('input[name="workingNoworkingRadio"]:checked').val())
@@ -37,9 +39,7 @@ $(document).ready(function(){
             $('.addEdit-organization-block').removeClass('existing-chip');
         }
         $(this).parent().remove();
-        if($('.organization-chips-block .chip').length < 1){
-            $('.addEdit-organization-block').hide();
-        }
+        initOrgBlock();
     });
     $('.add-org-btn').on('click', function(){
         $('.addEdit-organization-block').toggle().removeClass('existing-chip');
@@ -66,7 +66,11 @@ $(document).ready(function(){
     });
 
 
-
+    function initOrgBlock(){
+        if($('.organization-chips-block .chip').length < 1){
+            $('.addEdit-organization-block').hide();
+        }
+    };
     function fillForm(mode){
         $('form input').each(function(){
             if(mode === 'edit'){
