@@ -42,9 +42,12 @@ $(document).ready(function(){
         }
     });
     $('.add-org-btn').on('click', function(){
-        $('.addEdit-organization-block').show();
+        $('.addEdit-organization-block').toggle().removeClass('existing-chip');
+        $('.addEdit-organization-block input').val('');
+        $('.organization-chips-block .chip').removeClass('active');
     });
     $(document).on('click','.professional-history-block .chip', function(){
+        $('.addEdit-organization-block').show();
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
         $('.addEdit-organization-block input[id="Organisationname"]').val($(this).find('.org-name').text());
@@ -54,8 +57,8 @@ $(document).ready(function(){
         if($(this).closest('.addEdit-organization-block').hasClass('existing-chip')){
             $('.organization-chips-block .chip.active .org-name').text($('.addEdit-organization-block input[id="Organisationname"]').val());
         }else{
-            $('.add-org-chip').before('<div class="chip mb-2 mt-2 mr-3"><span class="org-name">'+ $('.addEdit-organization-block input[id="Organisationname"]').val() +'</span><span class="closebtn">×</span></div>')
-            // $('.addEdit-organization-block').addClass('existing-chip');
+            $('.add-org-chip').before('<div class="chip mb-2 mt-2 mr-3 active"><span class="org-name">'+ $('.addEdit-organization-block input[id="Organisationname"]').val() +'</span><i class="fa fa-times closebtn"></i></div>')
+            $('.addEdit-organization-block').addClass('existing-chip');
         }
     });
     $('.progress-bar').on('click', function(){

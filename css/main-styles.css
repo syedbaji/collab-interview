@@ -61,19 +61,28 @@ h6 {
     transition: all 1s ease-in-out;
 }
 
-.progress-block.step-1-done .progress-bar.step-1 .dot, .progress-block.step-1-done .progress-bar.step-1 .line {
+.progress-block.step-1-done .progress-bar.step-1 .dot, 
+.progress-block.step-1-done .progress-bar.step-1 .line {
     background: #00BB28;
 }
 
-.progress-block.step-2-done .progress-bar.step-2 .dot, .progress-block.step-2-done .progress-bar.step-2 .line {
+.progress-block.step-2-done .progress-bar.step-2 .dot, 
+.progress-block.step-2-done .progress-bar.step-2 .line {
     background: #00BB28;
 }
 
-.progress-block.step-3-done .progress-bar.step-3 .dot, .progress-block.step-3-done .progress-bar.step-3 .line {
+.progress-block.step-3-done .progress-bar.step-3 .dot, 
+.progress-block.step-3-done .progress-bar.step-3 .line {
     background: #00BB28;
 }
 
-.progress-block.step-4-done .progress-bar.step-4 .dot, .progress-block.step-4-done .progress-bar.step-4 .line {
+.progress-block.step-4-done .progress-bar.step-4 .dot, 
+.progress-block.step-4-done .progress-bar.step-4 .line {
+    background: #00BB28;
+}
+
+.progress-block.step-5-done .progress-bar.step-5 .dot, 
+.progress-block.step-5-done .progress-bar.step-5 .line {
     background: #00BB28;
 }
 
@@ -213,10 +222,9 @@ form .form-group input:-moz-placeholder {
 
 .chip {
     display: inline-block;
-    padding: 0 16px;
-    height: 32px;
-    font-size: 16px;
-    line-height: 32px;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: normal;
     color: #6C757D;
     border-radius: 32px;
     background: #FFFFFF;
@@ -230,12 +238,9 @@ form .form-group input:-moz-placeholder {
 }
 
 .closebtn {
-    padding-left: 10px;
     color: #888;
-    font-weight: bold;
-    float: right;
-    font-size: 20px;
     cursor: pointer;
+    padding: 0px 0 0 8px;
 }
 
 .closebtn:hover {
